@@ -21,9 +21,6 @@ module Tournaments::Pairing
         while invalid_match = self.find_invalid_match(bucketed[score]) do
           up_a_bucket = ( index + 1 < buckets.size ) ? buckets[index + 1] : buckets[index]
           down_a_bucket = buckets[index - 1]
-          puts up_a_bucket
-          puts down_a_bucket
-          puts score
           unless  self.swap_into_group(invalid_match, bucketed[score]) ||
                   self.swap_into_group(invalid_match, bucketed[up_a_bucket]) ||
                   self.swap_into_group(invalid_match, bucketed[down_a_bucket])
