@@ -43,7 +43,7 @@ module Tournaments
     end
 
     def inspect
-      "#<Player @name: #{name}, @id: #{id}>"
+      "#<Tournaments::Player @name=#{name} @id=#{id}>"
     end
 
   end
