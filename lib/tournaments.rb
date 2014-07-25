@@ -1,5 +1,10 @@
-require "tournaments/version"
+require 'tournaments/version'
+require 'tournaments/base'
 
 module Tournaments
-  # Your code goes here...
+  autoload :Player, 'tournaments/player'
+  autoload :PlayerList, 'tournaments/player_list'
+  autoload :Match, 'tournaments/match'
+  autoload :Game, 'tournaments/game'
+  autoload :Swiss, 'tournaments/swiss'
 end
