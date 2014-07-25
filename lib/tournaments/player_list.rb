@@ -3,7 +3,7 @@ require 'forwardable'
 module Tournaments
   class PlayerList
     extend Forwardable
-    def_delegators :@list, :<<, :length, :each # and anything else
+    def_delegators :@list, :<<, :length, :each, :each_slice # and anything else
     attr_accessor :list
 
     def initialize list = []

@@ -7,7 +7,7 @@ module Tournaments
         round = Tournaments::Round.new(tournament)
 
         shuffled_list.each_slice(2) do |players|
-          match = Match.new(tournament, *players)
+          match = Tournaments::Match.new(tournament, *players)
           round.matches << match
         end
         round

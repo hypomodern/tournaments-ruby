@@ -34,7 +34,7 @@ module Tournaments
     end
 
     def inspect
-      "#<Tournaments::Base @list=#{players.inspect} @rounds=[#{rounds.map(&:inspect).join(',')}]>"
+      "#<#{self.class.name} @list=#{players.inspect} @rounds=[#{rounds.map(&:inspect).join(',')}]>"
     end
   end
 end
