@@ -20,7 +20,7 @@ module Tournaments
 
     def inspect
       "#<Tournaments::PlayerList @list=[" +
-        @list.map {|p| "#{p.name} points: #{p.match_points}, SoS: #{p.strength_of_schedule}"}.join(", ") +
+        @list.map {|p| "#<Player (#{p.name}) points=#{p.match_points} SoS=#{p.strength_of_schedule}>"}.join(", ") +
         "]>"
     end
   end
