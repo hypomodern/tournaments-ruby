@@ -42,5 +42,9 @@ module Tournaments
       end
     end
 
+    def inspect
+      "#<Player @name: #{name}, @id: #{id}>"
+    end
+
   end
 end

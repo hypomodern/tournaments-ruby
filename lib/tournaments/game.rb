@@ -29,5 +29,9 @@ module Tournaments
     def player_is_loser? player
       self.loser == player
     end
+
+    def inspect
+      "#<Tournaments::Game @winner=#{winner.name} @loser=#{loser.name}>"
+    end
   end
 end

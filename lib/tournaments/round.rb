@@ -24,5 +24,9 @@ module Tournaments
       self.finished = true
       tournament.players.update_rankings
     end
+
+    def inspect
+      "#<Tournaments::Round @matches=[#{@matches.map(&:inspect).join(",")}] @finished=#{@finished}>"
+    end
   end
 end

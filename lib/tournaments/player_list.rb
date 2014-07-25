@@ -17,5 +17,11 @@ module Tournaments
     def update_rankings
       @list = list.sort
     end
+
+    def inspect
+      "#<PlayerList @list: [" +
+        @list.map {|p| "#{p.name} points: #{p.match_points}, SoS: #{p.strength_of_schedule}"}.join(", ") +
+        "]>"
+    end
   end
 end

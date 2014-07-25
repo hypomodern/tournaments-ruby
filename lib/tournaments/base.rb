@@ -32,5 +32,9 @@ module Tournaments
       current_round.finalize_round if current_round
       rounds << pairing_system.pair(self, players, options)
     end
+
+    def inspect
+      "#<Tournaments::Base @list=#{players.inspect} @rounds=[#{rounds.map(&:inspect).join(',')}]>"
+    end
   end
 end

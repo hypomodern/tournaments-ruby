@@ -56,5 +56,9 @@ module Tournaments
     #   games_won > games.length.to_f / 2
     # end
 
+    def inspect
+      "#<Tournaments::Match @players=[#{@players.map(&:inspect).join(", ")}] @games=[#{@games.map(&:inspect).join(", ")}] @finished==#{@finished}>"
+    end
+
   end
 end
